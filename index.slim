@@ -1,0 +1,475 @@
+doctype html
+html lang="es" 
+  head
+    meta charset="utf-8"
+    title Mini-Nature
+    meta name="description" content="Crea y completa tus dioramas con mini-nature"/
+    meta name="keywords" content="dioramas, figuras, maquetas"/
+    meta name="author" content="Gricel Sepulveda y Rodrigo Morel"/
+    meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no"/
+    /! RESET
+    link rel="stylesheet" href="css/normalize.css"
+    /! CUSTOM STYLES
+    link rel="stylesheet" href="css/styles.css"
+    /! CUSTOM FONT 1 
+    link rel="stylesheet" href="css/font-1-min.css"
+    /! CUSTOM FONT 2
+    link rel="stylesheet" href="css/font-2-min.css"
+    /! JQUERY
+    script type="text/javascript" src="http://code.jquery.com/jquery-1.4.2.min.js"
+    /! CUSTOM SCRIPTS
+    //script src="js/scripts.js"
+    javascript:
+      function rotateBanners(elem) {
+      var active = $(elem+" img.active");
+      var next = active.next();
+      if (next.length == 0) 
+        next = $(elem+" img:first");
+        active.removeClass("active").fadeOut(200);
+        next.addClass("active").fadeIn(200);
+      }
+
+      function prepareRotator(elem) {
+        $(elem+" img").fadeOut(0);
+        $(elem+" img:first").fadeIn(0).addClass("active");
+      }
+      function startRotator(elem) {
+        prepareRotator(elem);
+        setInterval("rotateBanners('"+elem+"')", 2500);
+      }
+
+      $(window).load(function() {
+        startRotator(".figura-index");
+      })
+  body
+
+    nav.main-navbar
+      .logo-navbar
+        img src="img/logo.svg" alt="logo mini-nature"
+      .links
+        a href="#" mini-nature.cl
+        h2 Made in Stgo, Chile
+
+    section.main-wrapper
+
+      figure.figura-index
+        img src="img/figura.png" alt="lorem ipsum"
+        img src="img/figura.png" alt="lorem ipsum"
+        img src="img/figura.png" alt="lorem ipsum"
+        img src="img/figura.png" alt="lorem ipsum"
+        img src="img/figura.png" alt="lorem ipsum"
+        img src="img/figura.png" alt="lorem ipsum"
+        img src="img/figura.png" alt="lorem ipsum"
+        img src="img/figura.png" alt="lorem ipsum"
+        img src="img/figura.png" alt="lorem ipsum"
+        img src="img/figura.png" alt="lorem ipsum"
+        img src="img/figura.png" alt="lorem ipsum"
+        img src="img/figura.png" alt="lorem ipsum"
+        img src="img/figura.png" alt="lorem ipsum"
+
+
+      article.welcome-text
+        div
+          h1 Lorem ipsum dolor sit amet.
+          p.description 
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+            span
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+      article.showcase
+        h2 Our products
+
+        /! SHOWCASE PASTO ELECTROESTÁTICO 2MM 50ML
+        ul.showcase-articles.showcase-1
+          h3
+            | Pasto electroestático 2mm 50ml.
+            span 
+              | (2mm Static Grass 1.7 oz.)
+          p.showcase-text 
+            | El pasto electrostático de 2mm Mini-Nature esta pensado para su aplicación en Wargaming y modelos en escalas cercanas a 1:50 o más pequeñas.
+            span
+              | Mini-Nature 2mm Static Grass is designed for it´s application in Wargaming and models on scales close to 1:50 or smaller.
+
+          .wrapper-colors
+            /! DISPLAY COLOR #1
+            li.showcase-color
+              h4
+                | Autumn
+                .wrapper
+                  .arrow
+              figure.color.color-1
+                img src="img/pas-el-2mm/01.png" alt="Autumn"
+            /! DISPLAY COLOR #2
+            li.showcase-color
+              h4
+                | Winter
+                .wrapper
+                  .arrow
+              figure.color.color-2
+                img src="img/pas-el-2mm/02.png" alt="Winter"
+            /! DISPLAY COLOR #3
+            li.showcase-color
+              h4 
+                | Spring
+                .wrapper
+                  .arrow
+              figure.color.color-3
+                img src="img/pas-el-2mm/03.png" alt="Spring"
+            /! DISPLAY COLOR #4
+            li.showcase-color
+              h4 
+                | Summer
+                .wrapper
+                  .arrow
+              figure.color.color-4
+                img src="img/pas-el-2mm/04.png" alt="Summer"
+            /! DISPLAY COLOR #5
+            li.showcase-color
+              h4 
+                | Savannah &#38; Sunbumtn (Por separado / Separately)
+                .wrapper
+                  .arrow
+              figure.color.color-5
+                img src="img/pas-el-2mm/05.png" alt="Savannah - Sunbumt (Por separado / Separately"
+            /! DISPLAY COLOR #6
+            li.showcase-color
+              h4 
+                | Yellow
+                .wrapper
+                  .arrow
+              figure.color.color-6
+                img src="img/pas-el-2mm/06.png" alt="Yellow"
+            /! DISPLAY COLOR #7
+            li.showcase-color
+              h4 
+                | Red &#38; Dark Red (Por separado / Separately)
+                .wrapper
+                  .arrow
+              figure.color.color-7
+                img src="img/pas-el-2mm/07.png" alt="Red &#38; Dark Red (Por separado / Separately"
+
+        /! SHOWCASE PASTO ELESTROESTÁTICO 4MM. 50ml.
+        ul.showcase-articles.showcase-4
+          h3 
+            | Pasto electroestático 4mm. 50ml.
+            span
+              | (4mm Static Grass 1.7 oz.)
+          p.showcase-text 
+            | Al igual que el resto de nuestros productos, el Pasto Electrostático de 4mm Mini Nature tiene diversas aplicaciones,  por ejemplo, crear los clásicos matojos de pasto.
+            span
+              | Like the rest of our products, Mini-Nature 4mm Static Grass has multiple applications, for example, creating classic grass toufts.
+
+          .wrapper-colors
+            /! DISPLAY COLOR #1
+            li.showcase-color
+              h4 
+                | Autumn
+                .wrapper
+                  .arrow
+              figure.color.color-1
+                img src="img/pas-el-4mm/01.png" alt="Autumn"
+            /! DISPLAY COLOR #2
+            li.showcase-color
+              h4 
+                | Winter
+                .wrapper
+                  .arrow
+              figure.color.color-2
+                img src="img/pas-el-4mm/02.png" alt="Winter"
+            /! DISPLAY COLOR #3
+            li.showcase-color
+              h4 
+                | Spring
+                .wrapper
+                  .arrow
+              figure.color.color-3
+                img src="img/pas-el-4mm/03.png" alt="Spring"
+            /! DISPLAY COLOR #4
+            li.showcase-color
+              h4 
+                | Summer
+                .wrapper
+                  .arrow
+              figure.color.color-4
+                img src="img/pas-el-4mm/04.png" alt="Summer"
+            /! DISPLAY COLOR #5
+            li.showcase-color
+              h4 
+                | Savannah
+                .wrapper
+                  .arrow
+              figure.color.color-5
+                img src="img/pas-el-4mm/05.png" alt="Savannah"
+            /! DISPLAY COLOR #6
+            li.showcase-color
+              h4 
+                | Sunbumtn
+                .wrapper
+                  .arrow
+              figure.color.color-6
+                img src="img/pas-el-4mm/06.png" alt="Sunbumtn"
+            /! DISPLAY COLOR #7
+            li.showcase-color
+              h4 
+                | Red &#38; Dark Red (Por separado / Separately)
+                .wrapper
+                  .arrow
+              figure.color.color-7
+                img src="img/pas-el-4mm/07.png" alt="Red &#38; Dark Red (Por separado / Separately"
+
+        /! SHOWCASE PASTO ELECTROESTÁTICO 6MM 50ML
+        ul.showcase-articles.showcase-2
+          h3 
+            | Pasto electroestático 6mm 50ml.
+            span 
+              | (6mm Static Grass 1.7 oz.)
+          p.showcase-text 
+            | ¡A alguien se le olvidó cortar el pasto! El pasto electrostático de 6mm. tiene variadas aplicaciones, tanto para figuras en escalas cercanas a 1:16 como en figuras que rodean la 1:48.
+            span
+              | Someone forgot to mow the lawn! 6mm Static Grass has various applications, both for 1:16 figures, as for figures surrounding 1:48 scale.
+
+          .wrapper-colors
+            /! DISPLAY COLOR #1
+            li.showcase-color
+              h4 
+                | Autumn
+                .wrapper
+                  .arrow
+              figure.color.color-1
+                img src="img/pas-el-6mm/01.png" alt="Autumn"
+            /! DISPLAY COLOR #2
+            li.showcase-color
+              h4 
+                | Winter
+                .wrapper
+                  .arrow
+              figure.color.color-2
+                img src="img/pas-el-6mm/02.png" alt="Winter"
+            /! DISPLAY COLOR #3
+            li.showcase-color
+              h4 
+                | Spring
+                .wrapper
+                  .arrow
+              figure.color.color-3
+                img src="img/pas-el-6mm/03.png" alt="Spring"
+            /! DISPLAY COLOR #4
+            li.showcase-color
+              h4 
+                | Summer
+                .wrapper
+                  .arrow
+              figure.color.color-4
+                img src="img/pas-el-6mm/04.png" alt="Summer"
+            /! DISPLAY COLOR #5
+            li.showcase-color
+              h4 
+                | Savannah &#38; Sunbumtn (Por separado / Separately)
+                .wrapper
+                  .arrow
+              figure.color.color-5
+                img src="img/pas-el-6mm/05.png" alt="Savannah - Sunbumt (Por separado / Separately"
+            /! DISPLAY COLOR #6
+            li.showcase-color
+              h4 
+                | Yellow
+                .wrapper
+                  .arrow
+              figure.color.color-6
+                img src="img/pas-el-6mm/06.png" alt="Yellow"
+            /! DISPLAY COLOR #7
+            li.showcase-color
+              h4 
+                | Red &#38; Dark Red (Por separado / Separately)
+                .wrapper
+                  .arrow
+              figure.color.color-7
+                img src="img/pas-el-6mm/07.png" alt="Red &#38; Dark Red (Por separado / Separately"
+
+        /! SHOWCASE PASTO ELESTROESTÁTICO 10MM. 50ml.
+        ul.showcase-articles.showcase-5
+          h3 
+            | Pasto electroestático 10mm. 50ml.
+            span
+              | (10mm Static Grass 1.7 oz.)
+          p.showcase-text 
+            | Nuestro Pasto Electrostático de 10mm es ideal para su aplicación en modelos y figuras cuya escala es superior a 1:32. La pintura  acrílica se adhiere perfectamente al pasto Mini-Nature.
+            span
+              | Our 10mm Static Grass is ideal for it´s application in models and figures which scale is greater than 1:32. Acrylic paint adheres perfectly to the Mini-Nature pasture.
+
+          .wrapper-colors
+            /! DISPLAY COLOR #1
+            li.showcase-color
+              h4 
+                | Autumn
+                .wrapper
+                  .arrow
+              figure.color.color-1
+                img src="img/pas-el-10mm/01.png" alt="Autumn"
+            /! DISPLAY COLOR #2
+            li.showcase-color
+              h4 
+                | Winter
+                .wrapper
+                  .arrow
+              figure.color.color-2
+                img src="img/pas-el-10mm/02.png" alt="Winter"
+            /! DISPLAY COLOR #3
+            li.showcase-color
+              h4 
+                | Spring
+                .wrapper
+                  .arrow
+              figure.color.color-3
+                img src="img/pas-el-10mm/03.png" alt="Spring"
+            /! DISPLAY COLOR #4
+            li.showcase-color
+              h4 
+                | Summer
+                .wrapper
+                  .arrow
+              figure.color.color-4
+                img src="img/pas-el-10mm/04.png" alt="Summer"
+            /! DISPLAY COLOR #5
+            li.showcase-color
+              h4 
+                | Green
+                .wrapper
+                  .arrow
+              figure.color.color-5
+                img src="img/pas-el-10mm/05.png" alt="Green"
+            /! DISPLAY COLOR #6
+            li.showcase-color
+              h4 
+                | Yellow
+                .wrapper
+                  .arrow
+              figure.color.color-6
+                img src="img/pas-el-10mm/06.png" alt="Yellow"
+
+        /! SHOWCASE BALASTO 50ml.
+        ul.showcase-articles.showcase-3
+          h3 
+            | Balasto 50ml.
+            span
+              | (Ballast 1.7 oz.)
+          p.showcase-text 
+            | El Balasto es comunmente utilizado como piedras o gravilla en figuras y dioramas. Disponible en Large (L), Medium (M) y Small (S) para su uso en distintas escalas.
+            span
+              | Ballast is commonly used as crushed stones or gravel in figures and dioramas. Available in Large (L), Medium (M) and Small (S) for it´s use in different modelling scales.
+
+          .wrapper-colors
+            /! DISPLAY COLOR #1
+            li.showcase-color
+              h4 
+                | Light Brown (L, M &#38; S)
+                .wrapper
+                  .arrow
+              figure.color.color-1
+                img src="img/bal/01.png" alt="Light Brown (L, M &#38; S)"
+            /! DISPLAY COLOR #2
+            li.showcase-color
+              h4 
+                | Brown (L, M &#38; S)
+                .wrapper
+                  .arrow
+              figure.color.color-2
+                img src="img/bal/02.png" alt="Brown (L, M &#38; S)"
+            /! DISPLAY COLOR #3
+            li.showcase-color
+              h4 
+                | Gray (L, M &#38; S)
+                .wrapper
+                  .arrow
+              figure.color.color-3
+                img src="img/bal/03.png" alt="Gray (L, M &#38; S)"
+            /! DISPLAY COLOR #4
+            li.showcase-color
+              h4 
+                | Black (L, M &#38; S)
+                .wrapper
+                  .arrow
+              figure.color.color-4
+                img src="img/bal/04.png" alt="Black (L, M &#38; S)"
+            /! DISPLAY COLOR #5
+            li.showcase-color
+              h4 
+                | River (L)
+                .wrapper
+                  .arrow
+              figure.color.color-5
+                img src="img/bal/05.png" alt="River (L)"
+
+        /! SHOWCASE LÍQUEN 100ML
+        ul.showcase-articles.showcase-6
+          h3 
+            | Líquen 100ml.
+            span
+              | (Lichen 3.4 oz.)
+          p.showcase-text 
+            | Un favorito dentro del hobby. Su textura única se mezcla fácilmente con el paisaje. Suele utilizarse como arbusto, follaje de árbol, y para cubrir terreno en cualquier escala.
+            span
+              | A favorite within the hobby. I'ts unique texture blends easily in landscape. Usually used as shrub, tree foliage, and cover for any terrain on any scale.
+
+          .wrapper-colors
+            /! DISPLAY COLOR #1
+            li.showcase-color
+              h4 
+                | Natural (N)
+                .wrapper
+                  .arrow
+              figure.color.color-1
+                img src="img/liquen/01.png" alt="Natural"
+            /! DISPLAY COLOR #2
+            li.showcase-color
+              h4 
+                | Pale Green (PG)
+                .wrapper
+                  .arrow
+              figure.color.color-2
+                img src="img/liquen/02.png" alt="Pale Green (PG)"
+            /! DISPLAY COLOR #3
+            li.showcase-color
+              h4 
+                | Light Green (LG)
+                .wrapper
+                  .arrow
+              figure.color.color-3
+                img src="img/liquen/03.png" alt="Light Green (LG)"
+            /! DISPLAY COLOR #4
+            li.showcase-color
+              h4 
+                | Medium Green (MG)
+                .wrapper
+                  .arrow
+              figure.color.color-4
+                img src="img/liquen/04.png" alt="Medium Green (MG)"
+            /! DISPLAY COLOR #5
+            li.showcase-color
+              h4 
+                | Dark Green (DG)
+                .wrapper
+                  .arrow
+              figure.color.color-5
+                img src="img/liquen/05.png" alt="Dark Green (DG)"
+            /! DISPLAY COLOR #6
+            li.showcase-color
+              h4 
+                | Autumn Mix (AM)
+                .wrapper
+                  .arrow
+              figure.color.color-6
+                img src="img/liquen/06.png" alt="Autumn Mix (AM)"
+
+
+    footer.main-footer
+      .logo-footer
+        img src="img/logo.svg" alt="logo mini-nature"
+      .social-links
+        span Síguenos en nuestras redes sociales
+        a href="#"
+          img src="img/fb.svg" href="#" alt="fanpage"
+        a href="#"
+          img src="img/insta.svg" href="#" alt="instagram"
+
+

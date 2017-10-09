@@ -1,0 +1,178 @@
+/*FIX VIEWPORT*/
+@viewport
+{ 
+  zoom: 1.0; 
+  width: extend-to-zoom;
+}
+@-ms-viewport
+{ 
+  width: extend-to-zoom; zoom: 1.0;
+}
+
+// GENERAL BREAKPOINTS
+$xxs: "(max-width: 340px)";
+$xs: "(max-width: 767px)";
+$sm: "(max-width: 991px)";
+$md: "(max-width: 1199px)";
+$lg: "(min-width: 1200px)";
+$xlg: "(min-width: 1600px)";
+
+// COLORS
+
+// GRAYSCALE
+$white: #ffffff;
+$black: #000000;
+
+
+// AUX MIXINGS
+@mixin zero 
+{
+  padding: 0;
+  margin: 0;
+}
+
+@mixin animate
+{
+  transition: all 0.25s ease-in;
+  -webkit-transition: all 0.25s ease-in;
+  -moz-transition: all 0.25s ease-in;
+}
+
+@mixin flex-common
+{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+@mixin flex-alt
+{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+
+/* SCROLLBARS */
+::-webkit-scrollbar 
+{
+  width: 5px;
+  @include animate;
+}
+
+::-webkit-scrollbar-track 
+{
+  background: $white;
+  @include animate;
+}
+
+.scrollable-content::-webkit-scrollbar * 
+{
+  background: $white;
+}
+
+::-webkit-scrollbar-thumb 
+{
+  background: gray;
+  @include animate;
+}
+ 
+/* CUSTOM RESETS AND OTHER PROPERITIES */ 
+html, body
+{
+  @include zero;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button, input, select, textarea, label, option, figure, ul, li, p, h1, h2, h3, h4, h5, h6, span, a
+{ 
+  box-shadow: none;
+  outline: none;
+  border-radius: 0;
+  border: none;
+  @include zero;
+  text: 
+  {
+    decoration: inherit;
+    decoration: none;
+    shadow: none;
+    indent: none;
+  }
+  font:
+  {
+    family: inherit;
+    size: inherit;
+  }
+  color: inherit;
+  list-style-type: none;
+  &:hover, &:active, &:visited, &:focus
+  {
+    outline: none;
+    border: none;
+    box-shadow: none;
+    border-box: none;
+  }
+}
+
+@mixin font-1{
+  font-family: 'font-1', Arial, sans-serif;
+  font-weight: 500, bold;
+}
+
+@mixin font-1-italic{
+  font-family: 'font-1-italic', Arial, sans-serif;
+  font-weight: 500, bold;
+  font-style: italic;
+}
+
+@mixin font-2{
+  font-family: 'font-2', Arial Black, sans-serif;
+  font-weight: 600, bolder;
+}
+
+.ease {
+    -webkit-transition: all 3s ease;
+    -moz-transition: all 3s ease;
+    -o-transition: all 3s ease;
+    transition: all 3s ease;
+}
+.ease-in {
+    -webkit-transition: all 3s ease-in;
+    -moz-transition: all 3s ease-in;
+    -o-transition: all 3s ease-in;
+    transition: all 3s ease-in;
+}
+.ease-out {
+    -webkit-transition: all 3s ease-out;
+    -moz-transition: all 3s ease-out;
+    -o-transition: all 3s ease-out;
+    transition: all 3s ease-out;
+}
+.ease-in-out {
+    -webkit-transition: all 3s ease-in-out;
+    -moz-transition: all 3s ease-in-out;
+    -o-transition: all 3s ease-in-out;
+    transition: all 3s ease-in-out;
+}
+.linear {
+    -webkit-transition: all 3s linear;
+    -moz-transition: all 3s linear;
+    -o-transition: all 3s linear;
+    transition: all 3s linear;
+}
+.cubic-bezier {
+    -webkit-transition: all 3s cubic-bezier(1, -0.5, 0.5, 1);
+    -moz-transition: all 3s cubic-bezier(1, -0.5, 0.5, 1);
+    -o-transition: all 3s cubic-bezier(1, -0.5, 0.5, 1);
+    transition: all 3s cubic-bezier(1, -0.5, 0.5, 1);
+}
